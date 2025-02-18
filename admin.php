@@ -88,7 +88,7 @@ foreach($result as $row){
     echo "<td>". $row["phone"] . "</td>";
     echo "<td style='display: none;'>". $row["password"] . "</td>";
 
-    echo "<td><a href='update2.php?id=" . $row["id"]."'>Изменить</a></td>";
+    echo "<td><a href='update.php?id=" . $row["id"]."'>Изменить</a></td>";
     echo "</tr>";
 }
 echo "</table>";
