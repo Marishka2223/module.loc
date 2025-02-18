@@ -45,12 +45,13 @@ die("Ошибка:" . $conn->connect_error);
 }
 $sql="SELECT * FROM  goods";
 if($result =$conn->query($sql)){
-echo "<table style='border-spacing: 20px 0px;'><tr ><th>Название</th><th>Описание</th><th>Подробности</th><th>Статус</th>Дата<th>Почта</th><th>Категория</th><th></th></tr>";
+echo "<table style='border-spacing: 20px 0px;'><tr ><th>Название</th><th>Описание</th><th>Подробности</th><th>Статус</th><th>Дата</th><th>Почта</th><th>Категория</th><th></th></tr>";
 foreach($result as $row){
     echo "<tr>";
     echo "<td>". $row["name"] . "</td>";
     echo "<td>". $row["content"] . "</td>";
     echo "<td>". $row["rate"]."</td>";
+    echo "<td>". $row["status"]."</td>";
     echo "<td>". $row["datez"] . "</td>";
     echo "<td>". $row["email_users"] . "</td>";
     echo "<td>". $row["category_name"] . "</td>";
@@ -79,7 +80,7 @@ $sql="SELECT * FROM  users WHERE id = '$id'";
 
 $sql="SELECT * FROM  users";
 if($result =$conn->query($sql)){
-echo "<table style='border-spacing: 20px 0px;'><tr><th>Логин</th><th>Имя</th<th>Почта</th><th>Телефон</th><th></th><th></th><th></th></tr>";
+echo "<table style='border-spacing: 20px 0px;'><tr><th>Логин</th><th>Имя</th><th>Почта</th><th>Телефон</th><th></tr>";
 foreach($result as $row){
     echo "<tr>";
     echo "<td>". $row["login"] . "</td>";
@@ -128,4 +129,5 @@ $conn->close();
 ?>
 </div>
 
+</body>
 </body>
